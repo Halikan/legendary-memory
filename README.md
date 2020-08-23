@@ -13,6 +13,7 @@ The field of computer science is one that is constantly shifting and evolving. L
 ___
 ## Code Review
 This code review goes over the projects that existed as precursors to the projects listed.
+View on [YouTube](https://youtu.be/cF41qKw7JXk)
 ___
 ## Grue 2
 ### Software Design and Engineering Artifact & Algorithms and Data Structure Artifact
