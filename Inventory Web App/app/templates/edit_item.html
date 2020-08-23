@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block app_content %}
+    <h1>Edit Item</h1>
+    <p>Only name and purchase price are required, but more the more info the better!</p>
+    {% if form %}
+        {% if confirmForm %}
+            <p>Are you sure you want to delete this item? It can't be undone!</p>
+            <!--A secondary form is used to confirm deletion by showing a second button once the Delete button is clicked-->
+            {{wtf.quick_form(confirmForm)}} 
+        {% endif %}
+        <!--Using the quick_form function, all of the field described in forms.py will be rendered-->
+        {{ wtf.quick_form(form) }}
+    {% endif %}
+{% endblock %}

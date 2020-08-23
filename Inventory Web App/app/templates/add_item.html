@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+<!--Using the quick_form function, all of the field described in forms.py will be rendered-->
+{% block app_content %}
+    <h1>Add a New Item</h1>
+    <p>Only name and purchase price are required, but more the more info the better!</p>
+    {% if form %}
+        {{ wtf.quick_form(form) }}
+    {% endif %}
+{% endblock %}

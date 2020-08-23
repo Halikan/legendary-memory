@@ -1,0 +1,15 @@
+
+<!--Defines one row entry, representing a single item's properties-->
+<tr>
+    <td>{{item.name}}</td>
+    <td>{{item.manufacturer}}</td>
+    <td>{{item.purchase_date}}</td>
+    <td>{{item.purchase_price}}</td>
+    <td>{{item.warranty}}</td>
+    <td>{{item.insured}}</td>
+    <td>{{item.current_value}}</td>
+    <td>{{item.serial}}</td>
+    <td>{{moment(item.date_added).format('LL')}}</td>
+    <td>{{moment(item.timestamp).fromNow()}}</td>
+    <td><a href="{{ url_for('edit_item', item_id=item.id) }}">Edit Item</a></td>
+</tr>
