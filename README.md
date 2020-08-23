@@ -1,37 +1,35 @@
-## Welcome to GitHub Pages
+# CS-499 ePortfolio
+## Self-Assessment
+  Completing my coursework throughout the program and developing my ePortfolio has helped showcase what I view as an incredibly important strength for any budding software engineer: the capacity and drive for constant growth by working with different tools and languages. While specialization certainly it has its use cases, I also value cross-language and system agnostic skills for the long term. Drawing lessons from different previous experiences into a refined approach to problem solving is what defines an adaptive software developer.
+  
+  While I may be new to the software engineering field, I have experience with collaborative team environments, including a process automation overhaul at my current employer where I worked in conjunction with our security administrator. My previous service experience has given me ample opportunity to understand and apply effective communication across various technical perspectives, from describing only highlights to fine technical details. I've had exposure to over a dozen different languages and technologies, ranging from Assembly to Python, worked with both SQL and NoSQL databases, and created projects from concept to final product.
+If there's one thing that I've learned from my years or study and practice, it's that I don't know everything. There's always opportunities for improvement and optimization, and more to learn, both in personal and professional life. I have established a firm foundation of knowledge to build upon, and I seek to keep improving as I absorb new information and practice with new technology.
 
-You can use the [editor on GitHub](https://github.com/Halikan/legendary-memory/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Halikan/legendary-memory/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+The field of computer science is one that is constantly shifting and evolving. Languages, stacks, and tools come and go, and you have to adapt. That constant shift is what drew me to this career in the first place, and it's what is going to keep driving me as I spend more time developing.
+#### Project Introduction
+  The artifacts I have included are projects I've chosen due to how the task challenged me to strive towards a better, more complete project. My first project is Grue 2, a tile based, console based game. It is small, and has even humbler beginnings as one of the very first things I programmed in C++, using as many concepts as possible just because I could rather than because they fit. By contrast I had to chance to approach the same task with a very different mindset now, one where I focused on reusability and efficiency rather than just practice. Furthermore, I took the opportunity to make use of an API that I had only briefly seen before, tcod. While the game may play very similarly to my old project, which is showcased in my code review, I'm quite proud of how much I was able to improve its presentation during the refactor.
+  
+  The second artifact is a web application intended to work as a front end for a database. While I had been exposed to various database technologies during my time as a student, I wanted to task myself with completely designing and implementing a database project, front and back. The user interface may be simple, but it is functional, and interacts quite well with the underlying database given that all of it save for Python was brand new to me. I know that in my career, I will be introduced to tools and languages I've never used, with the expectation that I'll be able to catch up and be productive enough to meet my expected deadlines. Tackling something new seemed like a fun task to get one more tool under my belt as I start out.
+___
+## Code Review
+This code review goes over the projects that existed as precursors to the projects listed.
+___
+## Grue 2
+### Software Design and Engineering Artifact & Algorithms and Data Structure Artifact
+#### Narrative
+  My first artifact is a refactor of a much older project I had previously developed, and it's meant to highlight my development in both software engineering and design, as well as algorithms and data structures. The original project was a game called Grue, where you played as a monster from an old text adventure game called Zork. The original project's idea was to utilize various data structures I had learned to develop a small, console based, turn based tile game without additional libraries, and I created it with C++ using Qt. While I was successful in what I set out to do at the time, the game was very small in scope (only a tiny square map grid), had integer input that required pressing enter to submit moves, and used questionable structures that were not very efficient, which was a result of focusing on variety rather than appropriateness. My refactor was meant to show my development since then.
+  
+  Compared to the original project, nearly everything save for the concept of the game's setting and gameplay loop was refactored while transcribing the project into Python. To improve the user experience and readability, I shifted from a basic console to using tcod, a Python port of libtcod, a module which provides an API for a true color console and other utilities helpful for developing roguelikes, which are traditionally tile based, turn based games where the player only has a single life with no checkpoints. Key features of the refactor improved randomized map generation including trees and clearings, colored rendering, a field of view system for the player that saves explored tiles, torchlight fields for the human entities hunting the player that burn the player and wane in intensity and reach over time, improved input, and a modular design to determine specific aspects for each entity including the ability to fight, emit light, and eat or become a food source to feed and heal the player.
+  
+  Overall this project highlights my ability to take abstract concepts and turn them into an executable plan that results in a complete, structured project. I created reusable modules that allow the entities to move and interact, trying to keep most logic out of the main.py file that runs the game loop. While when I first started developing, large amounts of files felt overwhelming, I've grown to find them incredibly useful when debugging, by heavily narrowing down my search to find corresponding code that requires improvement or tweaking. Regardless of a project's overall complexity, the problems each part is meant to solve usually comes down to a basic input and output that is used further down the line. Becoming more comfortable with managing my focus between overarching features and specific parts of a single function was a valuable lesson.
+___
+## Inventory Web Application
+### Databases Artifact
+#### Narrative
+  The second artifact that I've included is an Inventory web application meant to highlight my skill with databases. The idea behind this inventory app is to have a way for users to record of high value items in the event of loss or theft. This is one of the last things someone may think about creating before a disaster like a flood or fire strikes, but it can be invaluable for insurance purposes. I've used both SQL and NoSQL languages in the past, and I wanted to gain experience by working on the full stack. I was familiar with database creation and querying on a command line, and wanted to gain experience in taking that type of project a step further by creating a user friendly front-end interface.
+  
+  I had only used Python briefly in the past in my introductory programming course, but the rest of my education normally focused on C++ or Java. I wanted to approach this problem using tools I haven't used before. Due to that, I chose to use Flask for my web app, which utilized SQL Alchemy for the database. Technically, SQL Alchemy can use various database types, but I chose to use SQLite while developing it. If it were to be used in production, it could easily be transferred into something else, like MySQL.
+  
+  Due to the high variability in available information for products, the database uses only a few required fields, and they consist of strings within the database, but some use form validation to ensure that information is correct. A user can register an account, and then their items will be added to the database table and shown based on their unique user id.
+  
+  While having a general understanding of other parts of a team project you may not normally work on is useful as is, getting an opportunity for hands on experience, even on a simpler project, is very valuable experience. It changes that general abstract knowledge to experience that can be drawn from for similar problems. Creating this web app gave me insight on how a full project integrates various parts to create a working product, and showed me how it can be worthwhile to learn new tools when an opportunity arises due to how useful they can be in the future as well. Specialization, like becoming a database engineer, or a front end engineer, can be useful. The expertise gained over time is quite valuable. Until that time comes, however, I'd like to keep expanding the breadth of my experience to better understand how software development teamwork coalesces into a single final product.
